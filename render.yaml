@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: xauusd-super-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: TWELVEDATA_KEY
+        sync: false
+      - key: NEWSAPI_KEY
+        sync: false
+      - key: GROQ_KEY
+        sync: false
